@@ -1,0 +1,26 @@
+cabal-version: >=1.8
+
+name: linux-procfs
+version: 1.0.0
+build-type: Simple
+license: MIT
+license-file: LICENSE
+author: Rickard Nilsson <rickard@nixbuild.net>
+maintainer: Rickard Nilsson <rickard@nixbuild.net>
+homepage: https://github.com/nixbuild/haskell-linux-procfs
+bug-reports: https://github.com/nixbuild/haskell-linux-procfs/issues
+
+library
+  ghc-options:
+    -Wall
+    -Werror
+    -O
+  hs-source-dirs: .
+  exposed-modules: System.Linux.Procfs
+  build-depends:
+    attoparsec,
+    base,
+    binary,
+    text,
+    time,
+    unix
